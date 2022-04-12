@@ -54,3 +54,7 @@ main
     └── application.yml
     
 ```
+
+### 开发时遇到的错误
+1. mybatis-plus出现Not Found TableInfoCache | https://blog.csdn.net/m0_52532885/article/details/124124332?spm=1001.2014.3001.5501
+2. mapperscan相关问题 | 尽量还是打上mapper （不要靠近mapperscan，会变得不幸😅）
