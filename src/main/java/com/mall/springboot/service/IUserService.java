@@ -1,5 +1,6 @@
 package com.mall.springboot.service;
 
+import com.mall.springboot.controller.DTO.UserDto;
 import com.mall.springboot.entity.User;
 import com.baomidou.mybatisplus.extension.service.IService;
 import org.apache.ibatis.annotations.Mapper;
@@ -15,4 +16,17 @@ import org.apache.ibatis.annotations.Mapper;
 @Mapper
 public interface IUserService extends IService<User> {
 
+    /**
+     *
+     * @param userDto
+     * @return
+     */
+    UserDto login(UserDto userDto);
+
+    /**
+     *
+     * @param userDto
+     * @return
+     */
+    UserDto register(UserDto userDto);
 }

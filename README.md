@@ -25,14 +25,15 @@ vue
 ```
 ## 后端技术
 
-| 技术 | 版本 | 官网 |
-| :-----| ----: | :----: |
-| SpringBoot | 2.6.6 |  	https://spring.io/projects/spring-boot |
-| swagger | 3.0.0 |  	https://github.com/swagger-api |
-| mybatis-plus | 3.5.1 | https://baomidou.com/ |
-| mybatis-plus-generator | 0.26.1 | https://github.com/axios/axios |
+| 技术 |      版本 | 官网 |
+| :-----|--------:| :----: |
+| SpringBoot |   2.6.6 |  	https://spring.io/projects/spring-boot |
+| swagger |   3.0.0 |  	https://github.com/swagger-api |
+| mybatis-plus |   3.5.1 | https://baomidou.com/ |
+| mybatis-plus-generator |  0.26.1 | https://github.com/axios/axios |
 | lombok | 1.18.22 | https://projectlombok.org/ |
-| velocity | 1.7.0 | https://gitee.com/apache/velocity?hmsr=aladdin1e6 |
+| velocity |   1.7.0 | https://gitee.com/apache/velocity?hmsr=aladdin1e6 |
+| hutool |  5.7.20 | https://www.hutool.cn/ |
 
 ## 后端结构
 

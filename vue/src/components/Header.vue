@@ -7,14 +7,26 @@
       <el-breadcrumb-item>{{ currentPathName }}</el-breadcrumb-item>
     </el-breadcrumb>
   </div>
-  <el-dropdown style="width: 70px; cursor: pointer">
-    <span>田所浩二</span><i class="el-icon-arrow-down" ></i>
-    <el-dropdown-menu slot="dropdown">
-      <el-dropdown-item style="font-size: 14px; padding: 5px 0">个人信息</el-dropdown-item>
-      <el-dropdown-item style="font-size: 14px; padding: 5px 0">退出</el-dropdown-item>
-    </el-dropdown-menu>
+
+
+  <el-dropdown style="width: 100px; cursor: pointer">
+    <div style="display: inline-block">
+      <img :src="user.avatarUrl" alt=""
+           style="width: 30px; border-radius: 50%; position: relative; top: 10px; right: 5px">
+      <span>{{ user.nickname }}</span><i class="el-icon-arrow-down" ></i>
+      <el-dropdown-menu slot="dropdown" style="width: 100px; text-align: center">
+        <el-dropdown-item style="font-size: 15px; padding: 10px 0">
+          <router-link to="/person">个人信息</router-link>
+        </el-dropdown-item>
+        <el-dropdown-item style="font-size: 14px; padding: 5px 0">
+          <span style="text-decoration: none" @click="logout">退出</span>
+        </el-dropdown-item>
+      </el-dropdown-menu>
+    </div>
+
   </el-dropdown>
 </div>
+
 </template>
 
 <script>
@@ -26,6 +38,11 @@ export default {
   methods: {
     collapse() {
       this.$emit("asideCollapse")
+    },
+    logout(){
+      this.$router.push("/login")
+      localStorage.removeItem("user")
+      this.$message.success("退出成功")
     }
   },
   watch: { //监听路由变化
@@ -35,7 +52,8 @@ export default {
     },
   data(){
     return{
-      currentPathName: ''
+      currentPathName: '',
+      user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
     }
   }
   }

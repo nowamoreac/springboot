@@ -10,10 +10,18 @@ import java.util.Collections;
  * @date 2022/4/12 18:49
  */
 public class CodeGenerator {
+    /**
+     * 调用生成器
+     * @param args
+     */
     public static void main(String[] args) {
         generator();
 
     }
+
+    /**
+     * 代码生成器
+     */
     private static void generator(){
         FastAutoGenerator.create("jdbc:mysql://localhost:3306/test?serverTimezone=GMT%2b8", "root", "root")
                 .globalConfig(builder -> {

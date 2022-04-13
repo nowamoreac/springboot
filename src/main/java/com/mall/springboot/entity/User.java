@@ -28,33 +28,33 @@ public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
-      @ApiModelProperty("id")
-        @TableId(value = "id", type = IdType.AUTO)
-      private Integer id;
+    @ApiModelProperty("id")
+    @TableId(value = "id", type = IdType.AUTO)
+    private Integer id;
 
-      @ApiModelProperty("用户名")
-      private String username;
+    @ApiModelProperty("用户名")
+    private String username;
 
-      @ApiModelProperty("密码")
-      private String password;
+    @ApiModelProperty("密码")
+    private String password;
 
-      @ApiModelProperty("昵称")
-      private String nickname;
+    @ApiModelProperty("昵称")
+    private String nickname;
 
-      @ApiModelProperty("邮箱")
-      private String email;
+    @ApiModelProperty("邮箱")
+    private String email;
 
-      @ApiModelProperty("手机号码")
-      private String phone;
+    @ApiModelProperty("手机号码")
+    private String phone;
 
-      @ApiModelProperty("地址")
-      private String address;
+    @ApiModelProperty("地址")
+    private String address;
 
-      @ApiModelProperty("创建时间")
-      private LocalDateTime createTime;
+    @ApiModelProperty("创建时间")
+    private LocalDateTime createTime;
 
-      @ApiModelProperty("头像")
-      private String avatarUrl;
+    @ApiModelProperty("头像")
+    private String avatarUrl;
 
 
 }

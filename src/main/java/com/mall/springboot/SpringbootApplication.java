@@ -10,6 +10,10 @@ import springfox.documentation.oas.annotations.EnableOpenApi;
 @EnableOpenApi
 public class SpringbootApplication {
 
+    /**
+     * 启动类
+     * @param args
+     */
     public static void main(String[] args) {
         SpringApplication.run(SpringbootApplication.class, args);
     }

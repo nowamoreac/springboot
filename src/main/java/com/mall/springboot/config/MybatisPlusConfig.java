@@ -14,6 +14,10 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 @MapperScan("com.mall.springboot.mapper")
 public class MybatisPlusConfig {
+    /**
+     * 数据库连接
+     * @return
+     */
     @Bean
     public MybatisPlusInterceptor mybatisPlusInterceptor() {
         MybatisPlusInterceptor interceptor = new MybatisPlusInterceptor();

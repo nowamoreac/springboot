@@ -24,11 +24,13 @@
         icon-color="red"
         title="您确定批量删除这些数据吗？"
         @confirm="handleDeleteBatch">
-      <el-button type="danger" slot="reference">批量删除 <i class="el-icon-remove-outline"></i></el-button>
+      <el-button type="danger" slot="reference">批量删除 <i class="el-icon-remove-outline" /></el-button>
     </el-popconfirm>
-
-    <el-button type="primary" class="ml-5">导入 <i class="el-icon-bottom"></i></el-button>
-    <el-button type="primary" @click="exp">导出 <i class="el-icon-top"></i></el-button>
+<!--   导入-->
+    <el-upload action="http://localhost:9000/user/import" accept="xlsx" :show-file-list="false" :on-success="handleImportExcelSuccess" style="display: inline-block">
+    <el-button type="primary" class="ml-5">导入 <i class="el-icon-bottom" /></el-button>
+    </el-upload>
+    <el-button type="primary" @click="exp" class="ml-5">导出 <i class="el-icon-top"></i></el-button>
   </div>
   <!--表格-->
   <el-table :data="tableData" border stripe :header-cell-class-name="'headerBg'" @selection-change="handleSelectionChange">
@@ -106,6 +108,7 @@ export default {
       username: "",
       email: "",
       address: "",
+      nickname: "",
       form: {},
       dialogFormVisible: false, //对话框
       multipleSelection: [] //多选框
@@ -124,6 +127,7 @@ export default {
           username: this.username,
           email: this.email,
           address: this.address,
+          nickname: this.nickname,
           headerBg: 'headerBg'  //表头背景
         }
       }).then(res => {
@@ -177,7 +181,7 @@ export default {
     handleSelectionChange(val){
       this.multipleSelection = val
     },
-    handleDeleteBatch(){
+    handleDeleteBatch(){ // 删除
       let ids = this.multipleSelection.map(v => v.id)//将对象数组转化为纯数组
       this.request.post("/user/del/batch",ids).then(res => {
         if(res){
@@ -190,6 +194,10 @@ export default {
     },
     exp(){  //导出
       window.open("http://localhost:9000/user/export")
+    },
+    handleImportExcelSuccess(){
+      this.$message.success("文件导入成功")
+      this.load()
     }
 
   }
