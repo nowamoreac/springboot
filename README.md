@@ -40,14 +40,16 @@ vue
 ```
 main
 ├── springboot
+    ├── common
     ├── config
     ├── controller
     ├── entity
     ├── mapper
+    ├── Exception
     ├── service
     ├── utils
     └── SpringbootApplication
-├── sources
+├── resources
     ├── mapper
     ├── META-INF
     ├── static
