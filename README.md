@@ -1,6 +1,17 @@
 # 一个简单的前后端分离的管理系统
-
+### 项目介绍
 拥有最基本的注册，登录，数据管理。可以使用excle来进行数据的导入和导出。
+### 项目展示
+登录界面
+![图片](https://user-images.githubusercontent.com/76742505/175867033-c34205f8-6c0a-40b3-8c5d-5742809b4660.png)
+注册
+![图片](https://user-images.githubusercontent.com/76742505/175867258-5b77652d-2011-49b3-894f-4b157554e760.png)
+
+后台
+![图片](https://user-images.githubusercontent.com/76742505/175867122-d90a24ef-c5d8-4e64-9d59-18308c1d85ad.png)
+数据管理
+![图片](https://user-images.githubusercontent.com/76742505/175867183-5608754e-338d-4a05-993b-260e70e1ac82.png)
+
 
 ## 前端技术
 
