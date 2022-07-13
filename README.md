@@ -75,3 +75,6 @@ main
 1. mybatis-plus出现Not Found TableInfoCache | https://blog.csdn.net/m0_52532885/article/details/124124332?spm=1001.2014.3001.5501
 2. mapperscan相关问题 | 尽量还是打上mapper 
 <!-- 3. （不要靠近mapperscan，会变得不幸😅） -->
+
+
+<a target="_blank" href="http://mail.qq.com/cgi-bin/qm_share?t=qm_mailme&email=G3dyYnpxbnUqKSooI1tqajV4dHY" style="text-decoration:none;"><img src="http://rescdn.qqmail.com/zh_CN/htmledition/images/function/qm_open/ico_mailme_12.png"/></a>
